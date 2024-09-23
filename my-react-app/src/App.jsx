@@ -1,7 +1,7 @@
 // rafc  -> Shortcut
 
 
-// import React from 'react'
+// import React from 'react'.
 // import './App.css';
 
 // const App = () => {
@@ -46,7 +46,7 @@
 //   let [count,SetCount] = useState(0);
 //   let [color,SetColor] = useState('red')
 
-  
+
 //   function fun1 () {
 //     SetCount(count+1);
 //   }
@@ -62,7 +62,7 @@
 //   return (
 //     <div style={{backgroundColor:color,height:'100vh',width:'100vh'}}>
 //       <p>{count}</p>
-      
+
 //       <button onClick={fun1}>Button</button>
 //       <button onClick={fun2}>Button green</button>
 //       <button onClick={fun3}>Button red</button>
@@ -96,15 +96,111 @@
 //////////////////////////////////////////////////////////////////////////////
 
 
+// import React from 'react'
+// import ToDoList from './ToDoList'
+
+// const App = () => {
+//   return (
+//     <div>
+//       {/* <Input/> */}
+//       <ToDoList/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//////////////////////////////////////////////////////////////////////////////
+
+// import React, { useEffect, useState } from 'react';
+
+// const App = () => {
+//   const [count, setCount] = useState(0);
+//   function fun1() {
+//     setCount(count + 1)
+//   }
+
+//   const [city, SetCity] = useState('Bhopal');
+//   function fun2() {
+//     SetCity('Delhi');
+//   }
+
+//   const [api, SetApi] = useState([]);
+
+//   useEffect(() => {
+//     console.log('hello');
+//     fetch('https://dummyjson.com/recipes').then((res) => {
+//       return res.json();
+//     }).then((data) => {
+//       console.log(data, 'heh');
+//       SetApi(data.recipeks);
+//     })
+//   }, [] );
+
+//   return (
+//     <div>
+//       <p>{count}</p>
+//       <button onClick={fun1}>Click</button>
+//       <h1>{city}</h1>
+//       <button onClick={fun2}>change</button>
+      
+      
+      
+//       {
+//         api.map((a) => {
+//           return (<>
+//             <h3>{a.id}</h3>
+//             <p>{a.name}</p>
+//             <img height='100px' src={a.image}/>
+//           </>)
+//         })
+//       }
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+  // Routing
+
+// import React from 'react'
+// import NavBar from './NavBar'
+// import Home from './Home'  
+// import About from './About' 
+// import Contact from './Contact'
+// import ToDoList from './ToDoList'
+// import { Route, Routes } from 'react-router-dom'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <NavBar/>
+//       <Routes>
+//         <Route path='/' element={<Home/>} />
+//         <Route path='/about' element={<About/>} />
+//         <Route path='/contact' element={<Contact/>} />
+//         <Route path='/list' element={<ToDoList/>} />
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+////////////////////////////////////////////////////////////
+
 import React from 'react'
-import Input from './Input'
-import ToDoList from './ToDoList'
+import NavBar from './NavBar'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
     <div>
-      {/* <Input/> */}
-      <ToDoList/>
+      <NavBar/>
     </div>
   )
 }
