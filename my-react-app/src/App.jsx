@@ -193,14 +193,65 @@
 
 ////////////////////////////////////////////////////////////
 
+// import React from 'react'
+// import NavBar from './NavBar'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+// const App = () => {
+//   return (
+//     <div>
+//       <NavBar/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React from 'react'
+// import Form from './form'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Form />
+//     </div>
+//   )
+// }
+
+// export default App
+///////////////////////////////////////////////////
+
+
+// import React from 'react'
+// import SignUp from './SignUp'
+// import LoginPage from './LoginPage'
+// import { Route, Routes } from 'react-router-dom'
+
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Routes>
+//         <Route path='/login' element={<LoginPage />} />
+//         <Route path='/signup' element={<SignUp />} />
+//         <Route path='/' element={<LoginPage />} />
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+///////////////////////////////////////////////////
+
 import React from 'react'
-import NavBar from './NavBar'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Reducer from './Reducer'
 
 const App = () => {
   return (
     <div>
-      <NavBar/>
+      <Reducer/>
     </div>
   )
 }
