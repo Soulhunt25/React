@@ -222,20 +222,36 @@
 ///////////////////////////////////////////////////
 
 
-// import React from 'react'
-// import SignUp from './SignUp'
-// import LoginPage from './LoginPage'
-// import { Route, Routes } from 'react-router-dom'
+import React from 'react'
+import SignUp from './SignUp'
+import LoginPage from './LoginPage'
+import { Route, Routes } from 'react-router-dom'
 
+
+const App = () => {
+  return (
+    <div>
+      <Routes>
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/' element={<LoginPage />} />
+      </Routes>
+    </div>
+  )
+}
+
+export default App
+
+
+///////////////////////////////////////////////////
+
+// import React from 'react'
+// import Reducer from './Reducer'
 
 // const App = () => {
 //   return (
 //     <div>
-//       <Routes>
-//         <Route path='/login' element={<LoginPage />} />
-//         <Route path='/signup' element={<SignUp />} />
-//         <Route path='/' element={<LoginPage />} />
-//       </Routes>
+//       <Reducer/>
 //     </div>
 //   )
 // }
@@ -243,17 +259,15 @@
 // export default App
 
 
-///////////////////////////////////////////////////
+// import React from 'react'
+// import Home from './Home'
 
-import React from 'react'
-import Reducer from './Reducer'
+// const App = () => {
+//   return (
+//     <div>
+//       <Home/>
+//     </div>
+//   )
+// }
 
-const App = () => {
-  return (
-    <div>
-      <Reducer/>
-    </div>
-  )
-}
-
-export default App
+// export default App

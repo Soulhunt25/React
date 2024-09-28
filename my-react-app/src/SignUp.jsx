@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './styles/SignUp.css';
 
 const SignUp = () => {
   const [input, setInput] = useState({
@@ -9,6 +8,7 @@ const SignUp = () => {
     confirmPassword: '',
   });
 
+
   function signUp(e) {
     let { name, value } = e.target;
     setInput({ ...input, [name]: value });
@@ -16,7 +16,16 @@ const SignUp = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(input);
+
+    const {email, password, confirmPassword} = input;
+    if (password !== confirmPassword) {
+      alert("Password do not match.")
+      return;
+    }
+
+    localStorage.setItem('userData', JSON.stringify({email,password}));
+
+    // console.log(input);
   }
 
   return (

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './styles/Login.css';
 
 const LoginPage = () => {
   const [input, setInput] = useState({
@@ -15,7 +14,19 @@ const LoginPage = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(input);
+
+    const storedUserData = localStorage.getItem('userData');
+
+    if (storedUserData) {
+      const { email, password } = JSON.parse(storedUserData);
+
+      if (input.email === email && input.password === password) {
+        alert('Login successful!');
+      } 
+      else {
+        alert('Invalid email or password');
+      }
+    } 
   }
 
   return (
