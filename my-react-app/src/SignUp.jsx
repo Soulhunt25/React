@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
   const [input, setInput] = useState({
@@ -8,6 +8,7 @@ const SignUp = () => {
     confirmPassword: '',
   });
 
+  let Navigate = useNavigate();
 
   function signUp(e) {
     let { name, value } = e.target;
@@ -24,6 +25,8 @@ const SignUp = () => {
     }
 
     localStorage.setItem('userData', JSON.stringify({email,password}));
+
+    Navigate('/login')
 
     // console.log(input);
   }

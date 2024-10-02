@@ -222,25 +222,26 @@
 ///////////////////////////////////////////////////
 
 
-import React from 'react'
-import SignUp from './SignUp'
-import LoginPage from './LoginPage'
-import { Route, Routes } from 'react-router-dom'
+// import React from 'react'
+// import SignUp from './SignUp'
+// import LoginPage from './LoginPage'
+// import Home from './Home'
+// import { Route, Routes } from 'react-router-dom'
 
 
-const App = () => {
-  return (
-    <div>
-      <Routes>
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/' element={<LoginPage />} />
-      </Routes>
-    </div>
-  )
-}
+// const App = () => {
+//   return (
+//     <div>
+//       <Routes>
+//         <Route path='/login' element={<LoginPage />} />
+//         <Route path='/signup' element={<SignUp />} />
+//         <Route path='/' element={<Home />} />
+//       </Routes>
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 
 ///////////////////////////////////////////////////
@@ -271,3 +272,32 @@ export default App
 // }
 
 // export default App
+//////////////////////////////////////////////////////////////
+
+// import React from 'react'
+// import Api from './Api'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Api />
+//     </div>
+//   )
+// }
+
+// export default App
+
+////////////////////////////////////////////////////////////////////////
+
+import React from 'react'
+import Contact from './Contact'
+
+const App = () => {
+  return (
+    <div>
+      <Contact/>
+    </div>
+  )
+}
+
+export default App

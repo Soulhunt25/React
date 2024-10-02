@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [input, setInput] = useState({
     email: '',
     password: '',
   });
+
+  const Navigate = useNavigate()
 
   function login(e) {
     let { name, value } = e.target;
@@ -21,7 +23,8 @@ const LoginPage = () => {
       const { email, password } = JSON.parse(storedUserData);
 
       if (input.email === email && input.password === password) {
-        alert('Login successful!');
+        alert('Login successful');
+        Navigate('/')
       } 
       else {
         alert('Invalid email or password');
