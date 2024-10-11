@@ -79,4 +79,31 @@ body {
 .recipe-container p {
     font-size: 18px;
     color: #333;
-}   
+}
+
+/* Cart */
+
+.cart-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #30bf20;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #199610;
+}

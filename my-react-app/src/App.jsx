@@ -274,30 +274,77 @@
 // export default App
 //////////////////////////////////////////////////////////////
 
-// import React from 'react'
-// import Api from './Api'
-
-// const App = () => {
-//   return (
-//     <div>
-//       <Api />
-//     </div>
-//   )
-// }
-
-// export default App
-
-////////////////////////////////////////////////////////////////////////
-
 import React from 'react'
-import Contact from './Contact'
+import Api from './Api'
 
 const App = () => {
   return (
     <div>
-      <Contact/>
+      <Api />
     </div>
   )
 }
 
 export default App
+
+////////////////////////////////////////////////////////////////////////
+
+// import React from 'react'
+// import Contact from './Contact'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Contact/>
+//     </div>
+//   )
+// }
+
+// export default App
+/////////////////////////////////////////////////////////////////////////
+
+// import React from 'react'
+// import CustomHook from './CustomHook'
+
+// const App = () => {
+//   const {count, increament, decreament} = CustomHook();  
+//   return (
+//     <div>
+//       <h3>Count: {count}</h3>
+//       <button onClick={increament}>++</button>
+//       <button onClick={decreament}>--</button>
+//     </div>
+//   )
+// }
+
+// export default App
+/////////////////////////////////////////////////////////////////////
+// import React, { useRef, useState, useEffect } from 'react'
+// import CustomHook from './CustomHook'
+
+// const App = () => {
+
+//   const dataRef = useRef([])
+//   const [visible, setVisible] = useState(false)
+
+//   const { data, call } = CustomHook()
+
+//   useEffect(() => {
+//     if (visible) {
+//       call();  
+//     }
+//   }, [visible]) 
+  
+//   return (
+//     <div>
+//       <button onClick={() => setVisible(true)}>fetch</button>
+//       {
+//         visible && data.map((item, index) => (
+//           <li key={index}>{item}</li>
+//         ))
+//       }
+//     </div>
+//   )
+// }
+
+// export default App

@@ -12,28 +12,28 @@
 
 //////////////////////////////////////////////////////////////////
 
-import React from 'react'
-import { useEffect } from 'react';
-import { useRef } from 'react';
-import { useState } from 'react'
+// import React from 'react'
+// import { useEffect } from 'react';
+// import { useRef } from 'react';
+// import { useState } from 'react'
 
-const Contact = () => {
+// const Contact = () => {
   
-  let [state,setState] = useState('');
-  let data = useRef(0);
+//   let [state,setState] = useState('');
+//   let data = useRef(0);
 
 
-  useEffect(()=>{
-    data.current= data.current + 1;
-  })
+//   useEffect(()=>{
+//     data.current= data.current + 1;
+//   })
   
-  return (
-    <div>
-      <input type="text" value={state} onChange={e=>setState(e.target.value)}/>
-      <br /><br />
-      <h1>{data.current}</h1>
-    </div>
-  )
-}
+//   return (
+//     <div>
+//       <input type="text" value={state} onChange={e=>setState(e.target.value)}/>
+//       <br /><br />
+//       <h1>{data.current}</h1>
+//     </div>
+//   )
+// }
 
-export default Contact
+// export default Contact
